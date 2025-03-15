@@ -18,7 +18,7 @@ export interface BlogSectionProps {
 
 export const Blog = ({ blogs, tag }: BlogSectionProps) => {
     const heading = tag ? `📝 Blog: ${tag}` : '📝 Blog'
-    const articleCount = `${blogs.length} article${blogs.length > 1 && 's'}`
+    const articleCount = `${blogs.length} article${(blogs.length > 1 && 's') || ''}`
 
     return (
         <section className="flex flex-col space-y-8 pb-20 pt-4">
